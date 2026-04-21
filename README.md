@@ -1,105 +1,136 @@
+````md
 # World-Health-Population
 ---
+
 ## Repository Outline
-```
+```text
 1. README.md  
-   Penjelasan gambaran umum project
+   Overview and general explanation of the project
+
 2. modeling.ipynb  
-   Proses eksplorasi data, preprocessing, dan training model
+   Data exploration, preprocessing, and model training process
+
 3. inference.ipynb  
-   Proses untuk melakukan prediksi (inference)
+   Notebook for making predictions (inference)
+
 4. url.txt  
-   Berisi link deployment atau referensi terkait project
+   Contains deployment links or related project references
+
 5. deployment/
-   ├── Dockerfile            berisi konfigurasi container
-   ├── requirements.txt      berisi dependency project
+   ├── Dockerfile            Container configuration file
+   ├── requirements.txt     Project dependencies
    └── src/
-       ├── streamlit_app.py  berisi Main app Streamlit
-       ├── eda.py            berisi  Modul analisis data (EDA)
-       └── prediction.py     berisi  Modul prediksi
-```
+       ├── streamlit_app.py Main Streamlit application
+       ├── eda.py           Exploratory Data Analysis (EDA) module
+       └── prediction.py    Prediction module
+````
 
 ## Problem Background
-Dalam beberapa tahun terakhir, kondisi kesehatan suatu negara menjadi indikator penting dalam menilai tingkat kesejahteraan masyarakat. Salah satu indikator utama yang sering digunakan adalah **life expectancy (harapan hidup)**, yang dipengaruhi oleh berbagai faktor seperti kondisi kesehatan, akses layanan medis, sanitasi, dan faktor demografis.
 
-Namun, tidak semua negara memiliki tingkat kesehatan yang sama. Perbedaan ini dipengaruhi oleh berbagai indikator seperti tingkat fertilitas, angka kematian, fasilitas kesehatan, hingga kondisi ekonomi. Oleh karena itu, diperlukan pendekatan berbasis data untuk memahami faktor-faktor yang memengaruhi kondisi kesehatan suatu negara.
+In recent years, a country's health condition has become an important indicator in measuring the overall well-being of its population. One of the most commonly used indicators is **life expectancy**, which is influenced by various factors such as healthcare quality, access to medical services, sanitation, and demographic conditions.
+
+However, not all countries share the same level of health conditions. These differences are influenced by multiple indicators such as fertility rates, mortality rates, healthcare facilities, and economic conditions. Therefore, a data-driven approach is needed to better understand the factors affecting a country's health status.
 
 ## Objectives
-- Mengembangkan model *machine learning* untuk mengklasifikasikan **status kesehatan suatu negara**.
-- Mengidentifikasi hubungan antara indikator kesehatan dan life expectancy.
-- Membandingkan performa beberapa model untuk mendapatkan model terbaik.
-- Menghasilkan model yang dapat digunakan untuk prediksi data baru.
+
+* Develop a *machine learning* model to classify a country's **health status**.
+* Identify relationships between health indicators and life expectancy.
+* Compare the performance of multiple models to determine the best one.
+* Build a model that can be used for predicting new data.
 
 ## Project Output
-- Visualisasi data kesehatan global
-- Model machine learning untuk prediksi status kesehatan
-- Dashboard interaktif berbasis Streamlit
-- Insight dari data indikator kesehatan
-- Fitur prediksi secara real-time
+
+* Global health data visualizations
+* Machine learning model for health status prediction
+* Interactive Streamlit dashboard
+* Insights from health indicator data
+* Real-time prediction feature
 
 ## Data
-Dataset yang digunakan berisi berbagai negara, tahun, wilayah, kelompok ekonomi, indikator kesehatan dan populasi dari berbagai negara. Dataset asli memiliki 6 kolom dengan 3174996 data. Berikut kolom yang ada di dalam dataset:
-- `country_name`: negara
-- `indicator_name`: jenis indikator
-- `value`: nilai indikator
-- `year`: tahun
-- `region`: wilayah
-- `income_group`: kategori ekonomi
 
-Kemudian dataset akan diextract lagi berdasarkan indicator_name, seperti:
-- `Population growth`
-- `Mortality rate`
-- `Fertility rate`
-- `Healthcare resources (physicians, hospital beds, dll)`
-- `Sanitation & water access`
-- `Nutrition indicators`
-- `Life Expectancy`
+The dataset contains information about countries, years, regions, income groups, health indicators, and population data from various countries. The original dataset consists of 6 columns and 3,174,996 rows.
+
+Columns included in the dataset:
+
+* `country_name`: country name
+* `indicator_name`: type of indicator
+* `value`: indicator value
+* `year`: year
+* `region`: region
+* `income_group`: economic category
+
+The dataset is then transformed and extracted based on selected indicators such as:
+
+* Population growth
+* Mortality rate
+* Fertility rate
+* Healthcare resources (physicians, hospital beds, etc.)
+* Sanitation & water access
+* Nutrition indicators
+* Life Expectancy
 
 ## Method
-1. Data Preprocessing
-- Handling missing values (SimpleImputer)
-- Handling Outlier
-- Feature Frequency
-- Feature Encoding (OneHotEncoder & OrdinalEncoder)
-- Feature Scaling (MinMaxScaler)
 
-2. Modeling
-- K-Nearest Neighbors (KNN)
-- Support Vector Machine (SVM)
-- Decision Tree
-- Random Forest
-- Gradient Boosting
+### 1. Data Preprocessing
 
-3. Seleksi Model
-- Cross Validation
-- Hyperparameter tuning (GridSearchCV)
+* Handling missing values (*SimpleImputer*)
+* Handling outliers
+* Feature frequency transformation
+* Feature encoding (*OneHotEncoder* & *OrdinalEncoder*)
+* Feature scaling (*MinMaxScaler*)
 
-4. Evaluasi
-- Precision Score
-- ROC-AUC Score
+### 2. Modeling
 
-## Stacks
-- Programming Language: Python
-- Libraries:    
-a. pandas    
-b. numpy    
-c. matplotlib    
-d. seaborn   
-e. scikit-learn    
-f. phik
-- Tools:    
-a. VSCode    
-b. Streamlit    
-c. GitHub
+* K-Nearest Neighbors (KNN)
+* Support Vector Machine (SVM)
+* Decision Tree
+* Random Forest
+* Gradient Boosting
+
+### 3. Model Selection
+
+* Cross Validation
+* Hyperparameter tuning (*GridSearchCV*)
+
+### 4. Evaluation
+
+* Precision Score
+* ROC-AUC Score
+
+## Tech Stack
+
+### Programming Language
+
+* Python
+
+### Libraries
+
+* pandas
+* numpy
+* matplotlib
+* seaborn
+* scikit-learn
+* phik
+
+### Tools
+
+* VSCode
+* Streamlit
+* GitHub
 
 ## License
-Project ini bersifat open-source dan dapat digunakan untuk pembelajaran.
 
-## Reference
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
-- [Pandas Documentation](https://pandas.pydata.org/docs/)
-- [Seaborn Documentation](https://seaborn.pydata.org/)
-- [Streamlit Documentation](https://docs.streamlit.io/)
-- [Global Health Inequality – World Bank Insights](https://www.worldbank.org/en/topic/health)
-- [Our World in Data – Life Expectancy](https://ourworldindata.org/life-expectancy)
-- [WHO – Health Equity](https://www.who.int/health-topics/health-equity)
+This project is open-source and can be used for learning purposes.
+
+## References
+
+* [Scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html)
+* [Pandas Documentation](https://pandas.pydata.org/docs/)
+* [Seaborn Documentation](https://seaborn.pydata.org/)
+* [Streamlit Documentation](https://docs.streamlit.io/)
+* [World Bank – Global Health Insights](https://www.worldbank.org/en/topic/health)
+* [Our World in Data – Life Expectancy](https://ourworldindata.org/life-expectancy)
+* [WHO – Health Equity](https://www.who.int/health-topics/health-equity)
+
+```
+```
