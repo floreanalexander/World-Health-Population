@@ -80,16 +80,16 @@ Kemudian dataset akan diextract lagi berdasarkan indicator_name, seperti:
 
 ## Stacks
 - Programming Language: Python
-- Libraries:
-a. pandas
-b. numpy
-c. matplotlib
-d. seaborn
-e. scikit-learn
+- Libraries:    
+a. pandas    
+b. numpy    
+c. matplotlib    
+d. seaborn   
+e. scikit-learn    
 f. phik
-- Tools:
-a. VSCode
-b. Streamlit
+- Tools:    
+a. VSCode    
+b. Streamlit    
 c. GitHub
 
 ## License
