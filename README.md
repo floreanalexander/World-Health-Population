@@ -1,5 +1,5 @@
-````md
 # World-Health-Population
+
 ---
 
 ## Repository Outline
@@ -131,6 +131,3 @@ This project is open-source and can be used for learning purposes.
 * [World Bank – Global Health Insights](https://www.worldbank.org/en/topic/health)
 * [Our World in Data – Life Expectancy](https://ourworldindata.org/life-expectancy)
 * [WHO – Health Equity](https://www.who.int/health-topics/health-equity)
-
-```
-```
